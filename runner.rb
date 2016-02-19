@@ -1,6 +1,7 @@
 require_relative 'card'
 require_relative 'deck'
 require_relative 'view'
+require_relative 'parser'
 
 
 args = {
@@ -18,3 +19,5 @@ args = {
 
 new_card = 3
 show(new_card)
+
+sample_parsed

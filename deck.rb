@@ -2,12 +2,12 @@ class Deck
 
   attr_reader :cards
 
-  def initialize(file)
-    @file = file
+  def initialize(file_name)
+    @file = file_name
     @cards = []
 
   def load_deck(file)
-    loop parser
+    # loop parser
   end
 
   def add_card(front, back)
