@@ -1,11 +1,27 @@
-def parser(file)
-  deck_array = []
-    File.open(file).each do |line|
-      deck_array << line.chomp
-    end
-   deck_array = deck_array.each_slice(3).to_a
-   deck_array
+module Parser
+
+
+  def parse_file(file_name)
+    deck_array = []
+    File.open(file_name).each do |line|
+        deck_array << line.chomp
+      end
+      deck_array
+  end
+
 end
+
+
+
+
+# def parser(file)
+#   deck_array = []
+#     File.open(file).each do |line|
+#       deck_array << line.chomp
+#     end
+#    deck_array = deck_array.each_slice(3).to_a
+#    deck_array
+# end
 
 
 
