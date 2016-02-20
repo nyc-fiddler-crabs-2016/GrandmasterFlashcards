@@ -14,7 +14,7 @@ class Deck
   attr_reader :cards, :file
 
   def initialize(file_name)
-    @file = 'flashcard_samples.txt'
+    @file = file_name
     @cards = []
     #@deck_array = []
     # @parser = Parser.new
