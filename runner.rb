@@ -4,10 +4,10 @@ require_relative 'view'
 require_relative 'parser'
 
 
-args = {
-  front: 'HTML',
-  back: 'The language of the fucking web!'
-}
+# args = {
+#   front: 'HTML',
+#   back: 'The language of the fucking web!'
+# }
 
 # card = Card.new(args)
 
@@ -15,9 +15,16 @@ args = {
 
 # card.edit_front
 
-# show(card)
+# # show(card)
 
-new_card = 3
-show(new_card)
+# new_card = 3
+# show(new_card)
 
-sample_parsed
+# sample_parsed
+
+
+deck = Deck.new('flashcard_samples.txt')
+deck.load_deck
+# p deck.cards
+deck.show_deck
+
