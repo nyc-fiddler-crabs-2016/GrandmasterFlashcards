@@ -15,7 +15,6 @@ module Turn_logic
       if guess.downcase == card.front.downcase
         puts "You are right!"
         puts
-        puts 'Next turn......'
         return
       elsif guess == 'pass'
         puts
@@ -28,5 +27,4 @@ module Turn_logic
         make_guess(card)
       end
   end
-
 end

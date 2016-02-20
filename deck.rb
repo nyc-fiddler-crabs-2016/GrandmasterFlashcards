@@ -1,16 +1,13 @@
 require_relative 'parser'
 require_relative 'card'
-require 'pry'
+
 class Deck
   include Parser
-
   attr_reader :cards, :file
 
   def initialize(file_name)
     @file = file_name
     @cards = []
-    #@deck_array = []
-    # @parser = Parser.new
   end
 
   def load_deck
@@ -19,7 +16,6 @@ class Deck
         args  = {front: card_thing[1], back: card_thing[0]}
         @cards << Card.new(args)
     end
-
   end
 
   def add_card(front, back)
@@ -33,7 +29,5 @@ class Deck
   def shuffle
     @cards.shuffle
   end
-
 end
 
-# c
