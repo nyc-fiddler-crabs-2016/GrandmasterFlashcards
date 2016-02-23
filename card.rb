@@ -1,5 +1,4 @@
 class Card
-
   attr_reader :front, :back
 
   def initialize(args={})

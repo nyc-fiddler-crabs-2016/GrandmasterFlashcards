@@ -1,13 +1,21 @@
-class Deck
+require_relative 'parser'
+require_relative 'card'
 
-  attr_reader :cards
+class Deck
+  include Parser
+  attr_reader :cards, :file
 
   def initialize(file_name)
     @file = file_name
     @cards = []
+  end
 
-  def load_deck(file)
-    # loop parser
+  def load_deck
+      deck_array = parse_file(@file)
+      deck_array.each_slice(3).to_a.each do |card_thing|
+        args  = {front: card_thing[1], back: card_thing[0]}
+        @cards << Card.new(args)
+    end
   end
 
   def add_card(front, back)
@@ -20,12 +28,6 @@ class Deck
 
   def shuffle
     @cards.shuffle
-  end
-
-  def take_card
-    card = cards[0]
-    cards.rotate
-    card
   end
 end
 
